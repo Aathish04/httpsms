@@ -7,9 +7,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:15327853725:android:de83eabe0677867f5ae874",
+        "mobilesdk_app_id": "1:15327853725:android:5395538f56e81ea25ae874",
         "android_client_info": {
-          "package_name": "org.powderpuffpeople.trinit"
+          "package_name": "org.powderpuffpeople.trinitentry"
         }
       },
       "oauth_client": [],
