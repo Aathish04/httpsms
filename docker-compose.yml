@@ -7,13 +7,14 @@ services:
       POSTGRES_DB: httpsms
       POSTGRES_PASSWORD: dbpassword
       POSTGRES_USER: dbusername
+      # PGUSER: dbusername
     volumes:
       - postgres:/var/lib/postgresql/data
     ports:
       - "5435:5432"
     restart: on-failure
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready", "-U", "dbusername", "-d", "httpsms"]
+      test: ["CMD-SHELL", "pg_isready -d httpsms -U dbusername"]
       interval: 30s
       timeout: 60s
       retries: 5
