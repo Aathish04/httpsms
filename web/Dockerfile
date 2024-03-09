@@ -4,7 +4,9 @@ FROM node:lts-alpine as build
 WORKDIR /app
 
 COPY package*.json ./
-
+RUN apk add --update --no-cache python3 && ln -sf python3 /usr/bin/python
+RUN apk add make
+RUN apk add build-base
 # Install pnpm
 RUN npm install -g pnpm
 
